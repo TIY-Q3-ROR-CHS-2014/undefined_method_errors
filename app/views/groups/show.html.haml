@@ -1,0 +1,12 @@
+%h1 Group#show
+%p Find me in app/views/group/show.html.haml
+
+- @group.each do |x|
+  %br
+  = link_to "#{x.name}", group_volunteers_path(x)
+  = link_to "Edit group", edit_group_path(x)
+  = link_to "Destroy group", group_path(x), method: :delete
+
+%br
+= link_to "Create a group", new_group_path
+

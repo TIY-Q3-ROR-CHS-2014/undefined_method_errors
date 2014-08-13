@@ -1,32 +1,11 @@
 Rails.application.routes.draw do
-  get 'jobs/index'
-
-  get 'jobs/show'
-
-  get 'jobs/new'
-
-  get 'jobs/edit'
-
-  get 'volunteers/index'
-
-  get 'volunteers/show'
-
-  get 'volunteers/new'
-
-  get 'volunteers/edit'
-
-  get 'group/show'
-
-  get 'group/new'
-
-  get 'group/edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'group#show'
+  root 'groups#show'
 
   resources :groups do
     resources :volunteers do
