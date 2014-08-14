@@ -2,6 +2,12 @@
 %p Name: #{@group.name}
 %br
 - @group.volunteers.each do |volunteer|
+  = link_to "#{volunteer.name}", group_volunteer_path(@group, volunteer)
+  = link_to "Edit Volunteer", edit_group_volunteer_path(@group, volunteer)
+  = link_to "Delete Volunteer", group_volunteer_path(@group, volunteer), method: :delete
   %br
-  = link_to "#{volunteer.name}", link_to group_volunteer_path(@group, volunteer)
+%br
+= link_to "Add Volunteer", new_group_volunteer_path(@group)
+
+%br
 = link_to "Group Index (Back)", groups_path(@group)
