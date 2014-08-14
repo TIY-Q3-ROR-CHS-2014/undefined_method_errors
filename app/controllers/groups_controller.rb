@@ -1,25 +1,45 @@
 class GroupsController < ApplicationController
+  before_action :find_group, only: [:show, :edit, :update, :destroy]
+  
+  def index
+    @groups = Group.all
+  end
+
   def show
-    @group = Group.all
   end
 
   def new
-    @group = Group.new params[:id]    
+    @group = Group.new
   end
 
   def create
-    @group =Group.create group_params
-    redirect_to group_path(@group)
+    @group = Group.new group_params
+    @group.save
+    redirect_to groups_path
   end
-
 
   def edit
   end
 
-private
+  def update
+    @group.update_attributes group_params
+    redirect_to groups_path
+  end
+
+  def destroy
+    @group.delete
+    redirect_to groups_path(@group)
+  end
+
+  
+  private
+
+  def find_group
+    @group = Group.find params[:id]
+  end
 
   def group_params
-  params.require(:group).permit(:name)
+    params.require(:group).permit(:name)
   end
 
 end

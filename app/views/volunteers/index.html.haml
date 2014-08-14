@@ -10,7 +10,7 @@
 = link_to "Create a Volunteer", new_group_volunteer_path(@group)
 / add, edit, delete volunteers
 
-- @volunteer.jobs.each do |x|
+- @jobs.each do |x|
   %br
   = link_to "#{x.name}", group_volunteer_path(@group, @volunteer, x)
  

@@ -1,4 +1,4 @@
-=form_for [@group, @volunteer, @job] do |f|
+= form_for [@group, @job] do |f|
   = f.label :name
   = f.text_field :name
   
@@ -10,6 +10,6 @@
 
   =f.submit "Save Job"
 
-  - @volunteer.jobs.each do |x|
+- @volunteer.jobs.each do |x|
   %br
   = link_to "#{x.name}", group_volunteer_path(@group, @volunteer, x)
