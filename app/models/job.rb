@@ -1,4 +1,4 @@
 class Job < ActiveRecord::Base
-  belongs_to :group
-  belongs_to :volunteers
+has_many :volunteer_jobs
+has_many :volunteers through: :volunteer_jobs
 end
