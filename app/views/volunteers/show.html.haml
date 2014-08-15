@@ -1,11 +1,7 @@
-/ %h1 Volunteers#show
-/ %p Find me in app/views/volunteers/show.html.haml
-
-/ When we click this button it should change the status of the next 2 volunteers from not_done to done.
-
-/ = link_to "New Week", has_not_done_a_chore_this_round_group_volunteer_path(@group, @volunteer), method: :put
-
-/                       has_done_a_chore_this_round_group_volunteer_path(@group, @volunteer), method: :put
-
-/ Display Join table chores on the volunteer show page.
+%h1 Volunteer Show
+%p Name: #{@volunteer.name}
+- if @volunteer.volunteer_job
+  = @volunteer.volunteer_job
+  
+= link_to "Group Profile", group_path(@group)
 

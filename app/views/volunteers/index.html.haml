@@ -1,23 +1,23 @@
-%h1 List of Volunteers and Jobs
+/ %h1 List of Volunteers and Jobs
 
-- @volunteer.each do |x|
-  %br
-  = link_to "#{x.name}", group_volunteer_path(@group, x)
-  = link_to "Edit volunteer", edit_group_volunteer_path(@group, x)
-  = link_to "Destroy volunteer", group_volunteer_path(@group, x), method: :delete
+/ - @volunteer.each do |x|
+/   %br
+/   = link_to "#{x.name}", group_volunteer_path(@group, x)
+/   = link_to "Edit volunteer", edit_group_volunteer_path(@group, x)
+/   = link_to "Destroy volunteer", group_volunteer_path(@group, x), method: :delete
 
-%br
-= link_to "Create a Volunteer", new_group_volunteer_path(@group)
-/ add, edit, delete volunteers
+/ %br
+/ = link_to "Create a Volunteer", new_group_volunteer_path(@group)
+/ / add, edit, delete volunteers
 
-- @jobs.each do |x|
-  %br
-  = link_to "#{x.name}", group_volunteer_path(@group, @volunteer, x)
+/ - @jobs.each do |x|
+/   %br
+/   = link_to "#{x.name}", group_volunteer_path(@group, @volunteer, x)
  
-/ Move this functionality to the Jobs show page
-/ = link_to "Edit job", edit_group_volunteer_path(@group, x)
-/ = link_to "Destroy job", group_volunteer_path(@group, x), method: :delete
+/ / Move this functionality to the Jobs show page
+/ / = link_to "Edit job", edit_group_volunteer_path(@group, x)
+/ / = link_to "Destroy job", group_volunteer_path(@group, x), method: :delete
 
-%br
-  = link_to "Create a Job", new_group_volunteer_job_path(@group, @volunteer)
-/ add, edit, delete jobs
+/ %br
+/   = link_to "Create a Job", new_group_volunteer_job_path(@group, @volunteer)
+/ / add, edit, delete jobs

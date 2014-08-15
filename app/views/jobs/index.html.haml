@@ -1,2 +1,10 @@
-%h1 Jobs#index
-%p Find me in app/views/jobs/index.html.haml
+%h1 Jobs Index
+= link_to "Add Job", new_job_path
+%br
+- @jobs.each do |job|
+  = link_to "#{job.name}", job_path(job)
+  = link_to "Edit Job", edit_job_path(job)
+  = link_to "Delete Job", job_path(job), method: :delete
+  %br
+
+

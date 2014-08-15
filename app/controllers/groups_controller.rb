@@ -1,11 +1,14 @@
 class GroupsController < ApplicationController
   before_action :find_group, only: [:show, :edit, :update, :destroy]
   
+  
   def index
     @groups = Group.all
   end
 
   def show
+    @volunteers = Volunteer.all
+    @jobs = Job.all
   end
 
   def new
