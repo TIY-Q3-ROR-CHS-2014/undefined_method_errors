@@ -39,5 +39,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
+gem 'devise'
 gem 'workflow'
+
 gem 'delayed_job_active_record'
+
