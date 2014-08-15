@@ -41,8 +41,6 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'devise'
 gem 'workflow'
-<<<<<<< HEAD
 
-=======
 gem 'delayed_job_active_record'
->>>>>>> ff9230f08fe299c9f8e05f6ed27a3ccb3395adf0
+

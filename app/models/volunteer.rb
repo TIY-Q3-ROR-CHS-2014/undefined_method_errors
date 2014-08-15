@@ -3,19 +3,16 @@ class Volunteer < ActiveRecord::Base
   has_many :volunteer_jobs
   has_many :jobs, through: :volunteer_jobs
 
-<<<<<<< HEAD
+
 
  	devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
-  def self.available_volunteers(@jobs.length)
-    self.all.limit(@jobs.length)
-=======
   def self.available_volunteers(x)
     self.where(workflow_state: "has_not_done_a_chore_this_round").limit(x)
     # self.all.limit(x) 
   # this returns 2 volunteers starting at the beginning of the array
->>>>>>> ff9230f08fe299c9f8e05f6ed27a3ccb3395adf0
+
   end
 
   validates :name, presence: true
