@@ -3,8 +3,10 @@ class Volunteer < ActiveRecord::Base
   has_many :volunteer_jobs
   has_many :jobs, through: :volunteer_jobs
 
-  def self.available_volunteers(@jobs.length)
-    self.all.limit(@jobs.length)
+  def self.available_volunteers(x)
+    self.where(workflow_state: "has_not_done_a_chore_this_round").limit(x)
+    # self.all.limit(x) 
+  # this returns 2 volunteers starting at the beginning of the array
   end
 
   validates :name, presence: true
@@ -13,12 +15,12 @@ class Volunteer < ActiveRecord::Base
   workflow do
 
     state :has_not_done_a_chore_this_round do
-      event :its_your_turn_to_do_chores, transitions_to: :you_did_your_chores_for_this_round
+      event :new_week, transitions_to: :has_done_a_chore_this_round
     end 
 
-    state :you_did_your_chores_for_this_round do
-      event :everyone_did_their_chores_this_round, transitions_to: :has_not_done_a_chore_this_round
+    state :has_done_a_chore_this_round do
+      event :everyone_has_done_a_chore_this_round, transitions_to: :has_not_done_a_chore_this_round
     end
 
   end
-end
+end 
