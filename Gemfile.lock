@@ -37,14 +37,28 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.1)
+<<<<<<< HEAD
     devise (3.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+=======
+    delayed_job (4.0.2)
+      activesupport (>= 3.0, < 4.2)
+    delayed_job_active_record (4.0.1)
+      activerecord (>= 3.0, < 4.2)
+      delayed_job (>= 3.0, < 4.1)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+>>>>>>> ff9230f08fe299c9f8e05f6ed27a3ccb3395adf0
     erubis (2.7.0)
     execjs (2.2.1)
+    foreman (0.74.0)
+      dotenv (~> 0.11.1)
+      thor (~> 0.19.1)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -132,7 +146,12 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+<<<<<<< HEAD
   devise
+=======
+  delayed_job_active_record
+  foreman
+>>>>>>> ff9230f08fe299c9f8e05f6ed27a3ccb3395adf0
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
