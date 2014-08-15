@@ -1,9 +1,9 @@
 task create_chores: :environment do
   @jobs = Job.all
-  @volunteers = Vol.available_volunteers(@jobs.length)
+  @volunteers = Volunteer.available_volunteers(@jobs.length)
   
-  @jobs.each do |x, index|
-    @volunteers[index].volunteer_job.create(job: x)
+  @jobs.each_with_index do |x, y|
+    @volunteers[y].volunteer_jobs.create(job: x)
   end
 
-end
+end 
