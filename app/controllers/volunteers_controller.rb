@@ -16,7 +16,7 @@ class VolunteersController < ApplicationController
   def create
     @volunteer = @group.volunteers.create volunteer_params
     if @volunteer.save == true
-    redirect_to group_volunteer_path(@group, @volunteer)
+    redirect_to group_path(@group)
     else
     render :new
     end
@@ -27,7 +27,7 @@ class VolunteersController < ApplicationController
 
   def update
     @volunteer.update_attributes volunteer_params
-    redirect_to group_volunteer_path(@group, @volunteer)
+    redirect_to group_path(@group)
   end
 
   def destroy

@@ -1,3 +1,6 @@
-%h1 Volunteers#show
-%p Find me in app/views/volunteers/show.html.haml
+%h1 Volunteer Show
+%p Name: #{@volunteer.name}
+- if @volunteer.volunteer_job
+  = @volunteer.volunteer_job
+  
 = link_to "Group Profile", group_path(@group)

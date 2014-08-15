@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   resources :groups do
     resources :volunteers do
-      resources :jobs do
-      end
-    end
+    end 
+  end
+    
+
+  resources :jobs do
   end
 
 
