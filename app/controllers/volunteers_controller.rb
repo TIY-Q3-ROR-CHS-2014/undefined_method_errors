@@ -1,4 +1,5 @@
 class VolunteersController < ApplicationController
+  before_action :authenticate_volunteer!
   
   def index
     @volunteers = Volunteer.all
