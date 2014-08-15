@@ -1,6 +1,6 @@
 class VolunteersController < ApplicationController
 
-  before_action :authenticate_volunteer!
+  before_action :authenticate_volunteer!, :user_signed_in?
   
   before_action :find_group
   before_action :find_volunteer, only: [:show, :edit, :update, :destroy]
@@ -53,4 +53,3 @@ class VolunteersController < ApplicationController
   end
 
 end
-

@@ -1,5 +1,9 @@
 %h1 Welcome to The Iron Task Manager
 
+= link_to('Login', new_volunteer_session_path)
+
+= link_to('Signup', new_volunteer_registration_path)
+
 = link_to "Group Database", groups_path
 = link_to "Job Database", jobs_path
 %br
@@ -11,3 +15,4 @@
 - else
   %li
     = link_to('Login', new_volunteer_session_path)
+

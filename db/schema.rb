@@ -11,8 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815181443) do
 
+ActiveRecord::Schema.define(version: 20140815181443) do
+  
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
     t.integer  "attempts",   default: 0, null: false
@@ -56,17 +57,21 @@ ActiveRecord::Schema.define(version: 20140815181443) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "group_id"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.string   "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+<<<<<<< HEAD
+    t.boolean  "admin",                  default: false
+=======
     t.string   "workflow_state"
+>>>>>>> 55d98c6c44cfd2960074b60e5a1465f17d65371e
   end
 
   add_index "volunteers", ["email"], name: "index_volunteers_on_email", unique: true, using: :btree
