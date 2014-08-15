@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  devise_for :volunteers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,9 +10,12 @@ Rails.application.routes.draw do
 
   resources :groups do
     resources :volunteers do
-    end 
-  end
-    
+      member do
+      put :has_not_done_a_chore_this_round
+      put :has_done_a_chore_this_round
+      end 
+    end
+  end  
 
   resources :jobs do
   end

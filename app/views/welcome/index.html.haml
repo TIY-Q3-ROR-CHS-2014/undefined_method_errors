@@ -1,3 +1,13 @@
 %h1 Welcome to The Iron Task Manager
+
 = link_to "Group Database", groups_path
 = link_to "Job Database", jobs_path
+%br
+%br
+%br
+- if volunteer_signed_in?
+  %li
+    = link_to('Logout', destroy_volunteer_session_path, :method => :delete)
+- else
+  %li
+    = link_to('Login', new_volunteer_session_path)
