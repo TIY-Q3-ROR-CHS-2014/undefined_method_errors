@@ -9,4 +9,10 @@
   = link_to "Edit Volunteer", edit_group_volunteer_path(@group, volunteer)
   = link_to "Delete Volunteer", group_volunteer_path(@group, volunteer), method: :delete
   %br
+- if volunteer_signed_in?
+  %li
+    = link_to('Logout', destroy_volunteer_session_path, :method => :delete)
+- else
+  %li
+    = link_to('Login', new_volunteer_session_path)
 %br
