@@ -1,12 +1,13 @@
 class VolunteersController < ApplicationController
 
-  before_action :authenticate_volunteer!, :user_signed_in?
+  before_action :authenticate_volunteer!
   
   before_action :find_group
   before_action :find_volunteer, only: [:show, :edit, :update, :destroy]
 
   def index
     @volunteers = Volunteer.all
+    @groups = Group.all
   end
 
   def show
@@ -49,7 +50,7 @@ class VolunteersController < ApplicationController
   end
 
   def volunteer_params
-    params.require(:volunteer).permit(:name)
+    params.require(:volunteer).permit(:group_id)
   end
 
 end

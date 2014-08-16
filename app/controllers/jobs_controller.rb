@@ -4,6 +4,7 @@ class JobsController < ApplicationController
   
   def index
     @jobs = Job.all
+    @groups = Group.all
   end
 
   def show

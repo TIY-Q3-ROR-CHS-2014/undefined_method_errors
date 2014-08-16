@@ -1,5 +1,5 @@
 %h1 Jobs Index
-= link_to "Add Job", new_job_path
+%p= link_to "Add Job", new_job_path
 %br
 - @jobs.each do |job|
   = link_to "#{job.name}", job_path(job)
