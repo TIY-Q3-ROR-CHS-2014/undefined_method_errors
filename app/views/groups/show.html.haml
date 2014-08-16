@@ -1,18 +1,18 @@
 %h1 Group Profile
 %p Name: #{@group.name}
+
 %br
-= link_to "Add Volunteer", new_group_volunteer_path(@group)
-%br
-%br
+/ =@group.inspect
+/ %br 
+/ =@volunteers.inspect
+/ %br 
+%br 
 - @group.volunteers.each do |volunteer|
-  = link_to "#{volunteer.name}", group_volunteer_path(@group, volunteer)
-  = link_to "Edit Volunteer", edit_group_volunteer_path(@group, volunteer)
+  = link_to "#{volunteer.email}", group_volunteer_path(@group, volunteer)
   = link_to "Delete Volunteer", group_volunteer_path(@group, volunteer), method: :delete
   %br
-- if volunteer_signed_in?
-  %li
-    = link_to('Logout', destroy_volunteer_session_path, :method => :delete)
-- else
-  %li
-    = link_to('Login', new_volunteer_session_path)
-%br
+= link_to('Logout', destroy_volunteer_session_path, :method => :delete)
+|
+= link_to('Login', new_volunteer_session_path)
+|
+= link_to('Signup', new_volunteer_registration_path(@group))

@@ -7,6 +7,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    # @volunteers = @group.volunteers
     @volunteers = Volunteer.all
     @jobs = Job.all
   end
