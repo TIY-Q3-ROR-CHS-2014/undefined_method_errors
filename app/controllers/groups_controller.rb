@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new group_params
-    @group.save
+    @group.save 
     redirect_to groups_path
   end
 
@@ -26,7 +26,7 @@ class GroupsController < ApplicationController
 
   def update
     @group.update_attributes group_params
-    redirect_to groups_path
+    redirect_to groups_path(@group)
   end
 
   def destroy
