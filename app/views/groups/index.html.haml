@@ -1,9 +1,12 @@
-%a.btn.btn-primary{:href => "new_group_path"} Create Group
+%h1 Group Directory
+%p 
 = link_to "Create Group", new_group_path
 %br
-
+%br
+%p Please select your class:
 - @groups.each do |group|
   = link_to "#{group.name}", group_path(group)
+
 
   = link_to "Edit", edit_group_path(group)
   = link_to "Delete", group_path(group), method: :delete

@@ -7,10 +7,10 @@ background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.p
   padding: 40px 15px;
   text-align: center;
 }
-a.btn.btn-warning.btn-lg{text-align: center}
 h1{color: white;
 text-shadow: 2px 2px 3px #666666}
 p.lead{color: white;
 font-size: 18px;}
 p{color: white;}
 p.1{text-align: center;}
+a.btn.btn-info.btn-lg{text-align: center;}
