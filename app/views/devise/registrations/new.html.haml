@@ -17,10 +17,11 @@
     %br/
     = f.password_field :password_confirmation, autocomplete: "off"
     %br 
-
-- @groups.each do |group|
-  = check_box_tag 'volunteer[group_ids][]', group.id, @volunteer.groups.include?(group) 
-  = group.name
    
-  %div= f.submit "Sign up"
-  = render "devise/shared/links" 
+    %div= f.submit "Sign up"
+    = f.hidden_field :group_id, value: params[:group_id]
+/ - @groups.each do |group|
+/   = check_box_tag 'volunteer[group_ids][]', group.id, @volunteer.groups.include?(group) 
+/   = group.name
+
+= render "devise/shared/links" 
