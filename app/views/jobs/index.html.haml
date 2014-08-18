@@ -3,8 +3,9 @@
 %br
 - @jobs.each do |job|
   = link_to "#{job.name}", job_path(job)
-  = link_to "Edit Job", edit_job_path(job)
-  = link_to "Delete Job", job_path(job), method: :delete
+  = link_to "| Edit ", edit_job_path(job)
+  = link_to "| Delete Job |", job_path(job), method: :delete
   %br
+= link_to "| Back |", root_path
 
 

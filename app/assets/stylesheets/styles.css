@@ -2,15 +2,23 @@ body {
   padding-top: 0px;
   background-color: #00bd3c;
 background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
+
 }
-.starter-template {
+
+.starter-template{
   padding: 40px 15px;
   text-align: center;
 }
 h1{color: white;
 text-shadow: 2px 2px 3px #666666}
 p.lead{color: white;
+font-size: 18px;
+font}
+p{color: white;
 font-size: 18px;}
-p{color: white;}
 p.1{text-align: center;}
 a.btn.btn-info.btn-lg{text-align: center;}
+a{color:white;
+  font-size:18px;
+  font-weight: bold;
+}
