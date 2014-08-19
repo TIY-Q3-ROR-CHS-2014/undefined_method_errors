@@ -1,11 +1,10 @@
 %h1 Jobs Index
-%p= link_to "Add Job", new_job_path
+%p=link_to "Add Job", new_job_path, class: "btn btn-lg btn-warning btn-block"
+
 %br
 - @jobs.each do |job|
   = link_to "#{job.name}", job_path(job)
   = link_to "| Edit ", edit_job_path(job)
   = link_to "| Delete Job |", job_path(job), method: :delete
   %br
-= link_to "| Back |", root_path
-
 

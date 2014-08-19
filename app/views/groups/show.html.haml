@@ -2,17 +2,11 @@
 %p Name: #{@group.name}
 
 %br
-/ =@group.inspect
-/ %br 
-/ =@volunteers.inspect
-/ %br 
+
 %br 
 - @group.volunteers.each do |volunteer|
   = link_to "#{volunteer.email}", group_volunteer_path(@group, volunteer)
   = link_to "Delete Volunteer", group_volunteer_path(@group, volunteer), method: :delete
   %br
-= link_to('Logout', destroy_volunteer_session_path, :method => :delete)
-|
-= link_to('Login', new_volunteer_session_path)
-|
-= link_to('Signup', new_volunteer_registration_path(group_id: @group.id))
+= volunteer_login_links
+/ = link_to 'Signup', new_volunteer_registration_path(group_id: @group.id), class: 'btn btn-info btn-block'

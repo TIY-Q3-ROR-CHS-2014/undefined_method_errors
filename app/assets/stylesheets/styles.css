@@ -4,13 +4,17 @@ body {
 background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
 
 }
-
+a:hover{ font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
 .starter-template{
   padding: 40px 15px;
   text-align: center;
 }
 h1{color: white;
-text-shadow: 2px 2px 3px #666666}
+text-shadow: 2px 2px 3px #666666;
+text-align: center;}
 p.lead{color: white;
 font-size: 18px;
 font}
@@ -18,7 +22,8 @@ p{color: white;
 font-size: 18px;}
 p.1{text-align: center;}
 .btn.btn-info.btn-lg{text-align: center;}
+li{font-weight: bolder;}
 a{color:white;
   font-size:18px;
-  font-weight: bold;
+  font-weight: 200;
 }

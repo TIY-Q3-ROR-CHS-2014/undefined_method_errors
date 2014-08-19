@@ -1,7 +1,5 @@
 %h1 Groups
 %p1 
 = form_for @group do |f|
-      = f.label :name
-      = f.text_field :name
-
-      =f.submit "Add Group"
+      = f.text_field :name, class: "form-control", placeholder: 'Add Name Here...'
+      =f.submit "Add Group", class: 'btn btn-info btn-block'

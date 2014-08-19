@@ -39,11 +39,11 @@
           %a.navbar-brand{:href => "/"} The Iron Task Manager
         .collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li.active
+            %li{class: "#{is_link_active?('welcome')}"}
               = link_to 'Home', root_path            
-            %li
+            %li{class: "#{is_link_active?('groups')}"}
               = link_to 'Groups', groups_path
-            %li
+            %li{class: "#{is_link_active?('jobs')}"}
               = link_to 'Jobs', jobs_path
         / /.nav-collapse
     .container
