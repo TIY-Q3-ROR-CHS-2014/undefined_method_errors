@@ -9,3 +9,4 @@
   = link_to "Delete Volunteer", group_volunteer_path(@group, volunteer), method: :delete
   %br
 = volunteer_login_links
+/ = link_to 'Signup', new_volunteer_registration_path(group_id: @group.id), class: 'btn btn-info btn-block'

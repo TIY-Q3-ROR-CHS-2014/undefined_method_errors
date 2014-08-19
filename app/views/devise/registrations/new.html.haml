@@ -18,7 +18,7 @@
     = f.password_field :password_confirmation, autocomplete: "off"
     %br 
    
-    %div= f.submit "Sign up"
+    %div= f.submit "Sign up", class: 'btn btn-success'
     = f.hidden_field :group_id, value: params[:group_id]
 / - @groups.each do |group|
 /   = check_box_tag 'volunteer[group_ids][]', group.id, @volunteer.groups.include?(group) 
